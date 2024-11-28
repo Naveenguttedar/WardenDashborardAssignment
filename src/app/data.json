@@ -1,0 +1,17 @@
+{
+  "cardSection": [
+    {
+      "count": 2,
+      "message": "Active Leads,Pending Reservations",
+      "textStatus": "danger"
+    },
+    {
+      "count": 1,
+      "message": "Payment Due Leads (0 beds)",
+      "textStatus": "danger"
+    },
+    { "count": 1, "message": "Reserve Leads (0 beds)" },
+    { "count": 4, "message": "Total Leads in pipline (0 beds)" },
+    { "count": 4, "message": "Total Leads in pipline (0 beds)" }
+  ]
+}
