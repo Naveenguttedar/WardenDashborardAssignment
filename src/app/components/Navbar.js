@@ -1,4 +1,4 @@
-"use client"; // Required for client-side rendering in Next.js
+"use client";
 import { useState } from "react";
 import { FaSearch, FaBell, FaRobot, FaBars } from "react-icons/fa";
 import { PiHeadsetFill } from "react-icons/pi";

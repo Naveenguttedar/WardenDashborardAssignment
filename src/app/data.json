@@ -13,5 +13,82 @@
     { "count": 1, "message": "Reserve Leads (0 beds)" },
     { "count": 4, "message": "Total Leads in pipline (0 beds)" },
     { "count": 4, "message": "Total Leads in pipline (0 beds)" }
+  ],
+  "tableData": [
+    {
+      "id": "#555",
+      "name": "Test Lead",
+      "phone": "+91 9999999999",
+      "visitDate": null,
+      "status": "Active",
+      "roomReserved": { "room": null, "message": " Warden Boys Life" },
+      "tentativeCheckIn": null,
+      "source": "Walk In",
+      "activity": {
+        "status": "completed",
+        "message": "Reserve Room",
+        "step": "0"
+      }
+    },
+    {
+      "id": "#6260",
+      "name": "Contract Test",
+      "phone": "+91 9999999999",
+      "visitDate": null,
+      "status": "Active",
+      "roomReserved": { "room": null, "message": " Warden Boys Life" },
+      "tentativeCheckIn": null,
+      "source": "Referral",
+      "activity": {
+        "status": "completed",
+        "message": "Reserve Room",
+        "step": "0"
+      }
+    },
+    {
+      "id": "#1664",
+      "name": "Test Lead 112",
+      "phone": "+91 9999999999",
+      "visitDate": null,
+      "status": "Payment Due",
+      "roomReserved": { "room": "F012", "message": " Warden Boys Life" },
+      "tentativeCheckIn": "May 23, 2024",
+      "source": "Website",
+      "activity": {
+        "status": "pending",
+        "message": "Payment pending",
+        "step": "0"
+      }
+    },
+    {
+      "id": "#1604",
+      "name": "Test Lead 124",
+      "phone": "+91 9999999999",
+      "visitDate": null,
+      "status": "Reserved",
+      "roomReserved": { "room": "F013", "message": " Warden Boys Life" },
+      "tentativeCheckIn": "May 23, 2024",
+      "source": "Website",
+      "activity": {
+        "status": "pending",
+        "message": "Registration form pending",
+        "step": "1"
+      }
+    }
+  ],
+
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
   ]
 }

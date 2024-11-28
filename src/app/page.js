@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Table from "./components/Table";
@@ -6,6 +8,8 @@ import "./globals.css";
 import { FaPlus } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 export default function Home() {
+  const [selectedMonth, setSelectedMonth] = useState("Check in month");
+  const [monthDropdown, setMonthDropdown] = useState("false");
   return (
     <div>
       {/* Navbar */}
@@ -37,9 +41,31 @@ export default function Home() {
 
         {/* Filter Options */}
         <div className="flex-1 flex flex-wrap gap-4 justify-end">
-          {/* Check In Month */}
-          <div className="bg-gray-200 px-4 py-2 rounded-md text-sm md:text-lg text-gray-500">
-            Check in month
+          {/* Check In Month (added dropdown )*/}
+          <div className="relative inline-block min-w-7 px-4 ">
+            <button
+              onClick={(e) => setMonthDropdown((prev) => !prev)}
+              className="w-full bg-gray-200 px-4 py-2 rounded-md text-sm md:text-lg text-gray-500 text-left flex justify-between items-center"
+            >
+              {selectedMonth}
+              <RiArrowDropDownLine className="w-6 h-6 md:w-8 md:h-8" />
+            </button>
+            {!monthDropdown && (
+              <ul className="absolute mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10">
+                {data.months.map((month, index) => (
+                  <li
+                    key={index}
+                    onClick={() => {
+                      setSelectedMonth(month);
+                      setMonthDropdown(true);
+                    }}
+                    className="px-2 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    {month}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           {/* All Properties Dropdown */}
@@ -64,7 +90,7 @@ export default function Home() {
         </div>
       </div>
       {/* Table Section */}
-      <Table />
+      <Table data={data.tableData} />
       {/* <table className="px-4 md:px-8">
         <thead>
 
